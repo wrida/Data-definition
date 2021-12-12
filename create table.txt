@@ -1,0 +1,21 @@
+CREATE TABLE Customer (
+customerID VARCHAR(20) PRIMARY KEY,
+name VARCHAR(20) NOT NULL,
+telephone NUMBER 
+);
+
+
+
+CREATE TABLE Product(
+ProductID VARCHAR(20) PRIMARY KEY,
+Product_Name VARCHAR(20) NOT NULL,
+Price NUMBER CHECK(telehone_customer>0)
+);
+
+
+CREATE TABLE Orders(
+customerID VARCHAR(20) FOREIGN KEY,
+ProductID VARCHAR(20) FOREIGN KEY,
+Quantity NUMBER,
+Total_amount NUMBER
+);
